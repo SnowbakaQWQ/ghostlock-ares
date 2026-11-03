@@ -1,0 +1,23 @@
+# 编译产物（保留 artifacts/bin 里明确提交的）
+*.o
+*.so
+build/
+
+# 备份/临时文件
+*.bak*
+*.orig
+*.rej
+*~
+__pycache__/
+
+# 大体积、可再生成的资产
+# （如需比对，请自行从 https://www.mi.com/ ... 或本地内核源码树生成）
+*.b64
+vmlinux*.elf
+Image
+boot.img
+kernel.bin
+ramdisk.bin
+dis_all.txt
+*.tar.gz
+*.zip

@@ -1,0 +1,1 @@
+HWT,0,0,99,/data/vendor/core/,0,,,Sun Nov  1 02:03:59 CST 2026,1,5820997

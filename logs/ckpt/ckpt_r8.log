@@ -1,0 +1,49 @@
+453.215 tid=15410 BEGIN d8_heap_spray
+472.068 tid=15410 VAL   g41_raw_leaked = -544167416448 (0xffffff814d182d80)
+472.069 tid=15410 VAL   g41_mm_sz = 896 (0x380)
+472.070 tid=15410 VAL   g41_objs_per_slab = 36 (0x24)
+472.070 tid=15410 VAL   g41_slot = 13 (0xd)
+472.070 tid=15410 VAL   g41_page_off = 11648 (0x2d80)
+472.071 tid=15410 VAL   waiter_base_off = 32 (0x20)
+472.073 tid=15410 VAL   piwalk_owner_null = 0 (0x0)
+472.073 tid=15410 VAL   pg_lock_owner = -544167423359 (0xffffff814d181281)
+472.077 tid=15410 VAL   g39_drain_waves = 0 (0x0)
+472.078 tid=15410 VAL   g39_drain_done = 1 (0x1)
+472.081 tid=15410 VAL   g38_base = -544167428096 (0xffffff814d180000)
+472.082 tid=15410 VAL   g38_phys = 5588385792 (0x14d180000)
+472.082 tid=15410 VAL   g38_fake_lock = -544167424384 (0xffffff814d180e80)
+472.083 tid=15410 VAL   g38_lock_off = 3712 (0xe80)
+472.083 tid=15410 VAL   g38_reclaim = 32 (0x20)
+472.579 tid=15410 END   d8_heap_spray
+472.582 tid=24885 BEGIN owner_lock_pi_target
+472.582 tid=24884 BEGIN waiter_lock_pi_chain
+472.582 tid=24886 VAL   self_prio_after_batch19 = 39 (0x27)
+472.583 tid=24885 END   owner_lock_pi_target
+472.583 tid=24884 END   waiter_lock_pi_chain
+472.583 tid=24885 BEGIN owner_lock_pi_chain
+472.585 tid=24884 VAL   prio_at_block = 20 (0x14)
+472.585 tid=24884 BEGIN waiter_wait_requeue_pi
+472.717 tid=15410 BEGIN main_cmp_requeue_pi
+472.719 tid=15410 END   main_cmp_requeue_pi
+472.719 tid=15410 VAL   cmp_ret = -1 (0xffffffffffffffff)
+472.720 tid=15410 VAL   cmp_errno = 35 (0x23)
+472.720 tid=15410 VAL   cmp_dangling = 1 (0x1)
+472.720 tid=15410 VAL   pi_target = 2147508533 (0x80006135)
+472.720 tid=15410 VAL   pi_chain = 2147508532 (0x80006134)
+472.721 tid=15410 VAL   fire_from_main = 0 (0x0)
+472.721 tid=15410 VAL   punch_go_before = 0 (0x0)
+473.585 tid=24884 END   waiter_wait_requeue_pi
+473.588 tid=24886 VAL   cons_armed = 1 (0x1)
+473.588 tid=24886 VAL   cons_delay_usec = 50000 (0xc350)
+473.592 tid=15410 VAL   obs_wait_ms = 850 (0x352)
+473.592 tid=15410 VAL   obs_stamp_enter = 1 (0x1)
+473.592 tid=15410 VAL   obs_stamp_done = 1 (0x1)
+473.593 tid=15410 VAL   obs_stamp_fd = 4 (0x4)
+473.593 tid=15410 VAL   obs_stamp_ret = -1 (0xffffffffffffffff)
+473.593 tid=15410 VAL   obs_stamp_errno = 22 (0x16)
+473.593 tid=15410 VAL   obs_stamp_optlen = 264 (0x108)
+473.594 tid=15410 VAL   obs_stamp_off = 112 (0x70)
+473.638 tid=24886 VAL   cons_after_sleep = 1 (0x1)
+473.641 tid=24886 VAL   cons_tid_target = 24884 (0x6134)
+473.642 tid=24886 VAL   cons_call_idx = 1 (0x1)
+473.642 tid=24886 BEGIN consumer_sched_setattr
