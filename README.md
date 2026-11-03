@@ -70,6 +70,8 @@ src/                  适配后的 exploit 源码（含多机型 offset 表）
 artifacts/
   bin/                gK108（基线）、gK109（P3 修正）、gK92（rb_erase 里程碑）
                       + MD5SUMS.txt + build.sh
+    historic/         2026-10-16~10-23 的历史二进制 gK70~gK87b（回溯对比用）
+                      KNOWN_LOST.md ← 记录因崩溃而全零损坏、无法恢复的资产
   profile/            GhostLock App 的 profile（assets_ares.conf / profile_ares.bin）
 tools/
   runners/            ★ 上机脚本（含完整环境变量 export + dryrun 闸门 + 事后断言）

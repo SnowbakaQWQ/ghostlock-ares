@@ -7,3 +7,6 @@ ed88df2da9221645abc3fa521b845fef  build.sh
 gK108 = 1f52c2da  基线（0x02080B28 旧写目标）
 gK109 = 40bb48de  P3 修正（0x02080B08 = &selinux_state）
 gK92  = 634a144f  rb_erase_cached+0x30 里程碑（stamp 三字段全生效的基准参数组）
+
+historic/ = 2026-10-16~10-23 的历史二进制（gK70~gK87b），供回溯对比。
+详见 historic/KNOWN_LOST.md（含 gK57/gK79 全零损坏记录）。
