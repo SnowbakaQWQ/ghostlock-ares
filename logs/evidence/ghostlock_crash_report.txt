@@ -1,0 +1,326 @@
+================================================================================
+  GhostLock / CVE-2026-43499  崩溃日志整理报告
+================================================================================
+  生成时间 : 2026-10-18 20:19:08
+  设备     : Redmi K40 游戏增强版 (ares / M2012K10C / MT6893 / 天玑1200)
+  内核     : 4.14.186-g844fd19c6 #1 SMP PREEMPT aarch64
+  系统     : Android 13 / SDK33 / MIUI V816 / TP1A.220624.014
+  数据来源 : /data/miuilog/stability/reboot/*.zip  (MTK AEE 崩溃包)
+             /data/vendor/aee_exp/db_history   (全量崩溃历史索引)
+  说明     : 每个崩溃包内含 logcat(main/events/radio) + dmesg + getprop + ps
+================================================================================
+
+【一】崩溃历史（来自 db_history）
+--------------------------------------------------------------------------------
+  db_history 全量 KE 记录: 110 条
+  其中 2026-10-18 / 10-19（本次实验期间）: 33 条
+
+  ▼ 2026-10-18 起的全部崩溃（时间 | 崩溃点）
+
+  Sun Oct 18 09:09:16 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 09:24:45 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 09:33:18 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 09:43:29 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 11:25:40 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 11:38:55 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 11:52:43 CST 2026  |  KE at rt_mutex_adjust_prio_chain+0x14c/0x68c
+  Sun Oct 18 11:58:41 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 12:03:20 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 12:57:55 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 17:54:06 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 18:22:50 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 18:34:42 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 18:48:31 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 20:36:20 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 20:47:40 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 21:56:31 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 22:07:52 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Sun Oct 18 22:19:00 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 00:44:20 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 00:49:51 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 00:53:51 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 01:11:33 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 01:15:15 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 01:21:50 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 01:27:32 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 01:33:49 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 01:37:54 CST 2026  |  KE at rt_mutex_adjust_prio_chain+0x14c/0x68c
+  Mon Oct 19 01:42:16 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 02:11:43 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 02:21:29 CST 2026  |  KE at _raw_spin_trylock+0x1c/0x70
+  Mon Oct 19 02:28:35 CST 2026  |  KE at rt_mutex_adjust_prio_chain+0x14c/0x68c
+  Mon Oct 19 03:54:06 CST 2026  |  KE at rt_mutex_adjust_prio_chain+0x14c/0x68c
+
+  ★ 观察: 本次实验期间崩溃点只有两种形态
+      A) _raw_spin_trylock+0x1c/0x70            —— PI walk 里 trylock 非法 lock
+      B) rt_mutex_adjust_prio_chain+0x14c/0x68c —— prio_chain 内部直接踩空
+
+      B 形态只在后期（偏移修正之后）出现，是重要信号。
+
+================================================================================
+【二】已完整解出 backtrace 的 5 次崩溃
+================================================================================
+
+--------------------------------------------------------------------------------
+  时间: 1
+  崩溃点: Sun Oct 18 21:56:31 CST 2026
+  包名: 7982830515415353e757ee27656f7ed0
+--------------------------------------------------------------------------------
+Exception Class: Kernel (KE)
+PC is at [<ffffff8a9e2e5854>] _raw_spin_trylock+0x1c/0x70
+LR is at [<ffffff8a9d334934>] rt_mutex_adjust_prio_chain+0x104/0x68c
+
+Current Executing Process:
+[gH, 7880][timeout, 28800][sh, 28799][sh, 28795][binder:29087_5, 29884]
+
+Backtrace:
+[<ffffff8a9d28f390>] die+0x114/0x27c   
+[<ffffff8a9d2a64c0>] __do_kernel_fault+0x12c/0x140     
+[<ffffff8a9d2a5d10>] do_translation_fault+0x60/0x98    
+[<ffffff8a9d280d7c>] do_mem_abort+0x48/0xd0    
+[<ffffff8a9d283308>] el1_da+0x1c/0x38  
+[<ffffff8a9d334930>] rt_mutex_adjust_prio_chain+0x100/0x68c    
+[<ffffff8a9d3357d4>] remove_waiter+0x1b4/0x1f0 
+[<ffffff8a9d33590c>] rt_mutex_cleanup_proxy_lock+0x48/0x94     
+[<ffffff8a9d373020>] futex_lock_pi+0x5c4/0x79c 
+[<ffffff8a9d36f668>] do_futex+0xf0/0x1b60      
+[<ffffff8a9d37333c>] SyS_futex+0x144/0x1c8     
+[<ffffff8a9d28403c>] el0_svc_naked+0x30/0x38   
+[<fffffffffffffffb>] 0xfffffffffffffffb
+
+--------------------------------------------------------------------------------
+  时间: 1
+  崩溃点: Sun Oct 18 20:47:40 CST 2026
+  包名: 2d494ff0ca0c4843296aff8a8c4bc1fe
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  时间: 1
+  崩溃点: Mon Oct 19 00:53:51 CST 2026
+  包名: e4efb06a64d67f65e8c174eb452575db
+--------------------------------------------------------------------------------
+Exception Class: Kernel (KE)
+PC is at [<ffffff9c30ae5854>] _raw_spin_trylock+0x1c/0x70
+LR is at [<ffffff9c2fb34934>] rt_mutex_adjust_prio_chain+0x104/0x68c
+
+Current Executing Process:
+[gJ3, 20754][timeout, 13585][sh, 13581][binder:8888_5, 9447]
+
+Backtrace:
+[<ffffff9c2fa8f390>] die+0x114/0x27c   
+[<ffffff9c2faa64c0>] __do_kernel_fault+0x12c/0x140     
+[<ffffff9c2faa5d88>] do_page_fault+0x40/0x3f0  
+[<ffffff9c2faa5cf0>] do_translation_fault+0x40/0x98    
+[<ffffff9c2fa80d7c>] do_mem_abort+0x48/0xd0    
+[<ffffff9c2fa83308>] el1_da+0x1c/0x38  
+[<ffffff9c2fb34930>] rt_mutex_adjust_prio_chain+0x100/0x68c    
+[<ffffff9c2fb3481c>] rt_mutex_adjust_pi+0x98/0xac      
+[<ffffff9c2faf8320>] __sched_setscheduler+0xc9c/0xe24  
+[<ffffff9c2faf88c8>] SyS_sched_setattr+0x3dc/0x508     
+[<ffffff9c2fa8403c>] el0_svc_naked+0x30/0x38   
+[<fffffffffffffffb>] 0xfffffffffffffffb
+
+--------------------------------------------------------------------------------
+  时间: 1
+  崩溃点: Mon Oct 19 01:37:54 CST 2026
+  包名: 2f7bc346493f7540ec4d5e7c8c744165
+--------------------------------------------------------------------------------
+Exception Class: Kernel (KE)
+PC is at [<ffffff86af73497c>] rt_mutex_adjust_prio_chain+0x14c/0x68c
+LR is at [<ffffff86af734934>] rt_mutex_adjust_prio_chain+0x104/0x68c
+
+Current Executing Process:
+[gH, 21156][timeout, 13992][sh, 13989][binder:11057_5, 11937]
+
+Backtrace:
+[<ffffff86af68f390>] die+0x114/0x27c   
+[<ffffff86af6a64c0>] __do_kernel_fault+0x12c/0x140     
+[<ffffff86af6a5d88>] do_page_fault+0x40/0x3f0  
+[<ffffff86af6a5cf0>] do_translation_fault+0x40/0x98    
+[<ffffff86af680d7c>] do_mem_abort+0x48/0xd0    
+[<ffffff86af683308>] el1_da+0x1c/0x38  
+[<ffffff86af73497c>] rt_mutex_adjust_prio_chain+0x14c/0x68c    
+[<ffffff86af7357d4>] remove_waiter+0x1b4/0x1f0 
+[<ffffff86af73590c>] rt_mutex_cleanup_proxy_lock+0x48/0x94     
+[<ffffff86af773020>] futex_lock_pi+0x5c4/0x79c 
+[<ffffff86af76f668>] do_futex+0xf0/0x1b60      
+[<ffffff86af77333c>] SyS_futex+0x144/0x1c8     
+[<ffffff86af68403c>] el0_svc_naked+0x30/0x38   
+[<fffffffffffffffb>] 0xfffffffffffffffb
+
+--------------------------------------------------------------------------------
+  时间: 1
+  崩溃点: Mon Oct 19 01:42:16 CST 2026
+  包名: 5d1d50fb9e141d734401c9d6443cc203
+--------------------------------------------------------------------------------
+Exception Class: Kernel (KE)
+PC is at [<ffffff993cee5854>] _raw_spin_trylock+0x1c/0x70
+LR is at [<ffffff993bf34934>] rt_mutex_adjust_prio_chain+0x104/0x68c
+
+Current Executing Process:
+[gN, 29240][timeout, 22090][sh, 22086][binder:10707_2, 10737]
+
+Backtrace:
+[<ffffff993be8f390>] die+0x114/0x27c   
+[<ffffff993bea64c0>] __do_kernel_fault+0x12c/0x140     
+[<ffffff993bea5d10>] do_translation_fault+0x60/0x98    
+[<ffffff993be80d7c>] do_mem_abort+0x48/0xd0    
+[<ffffff993be83308>] el1_da+0x1c/0x38  
+[<ffffff993bf34930>] rt_mutex_adjust_prio_chain+0x100/0x68c    
+[<ffffff993bf3481c>] rt_mutex_adjust_pi+0x98/0xac      
+[<ffffff993bef8320>] __sched_setscheduler+0xc9c/0xe24  
+[<ffffff993bef88c8>] SyS_sched_setattr+0x3dc/0x508     
+[<ffffff993be8403c>] el0_svc_naked+0x30/0x38   
+[<fffffffffffffffb>] 0xfffffffffffffffb
+
+================================================================================
+【三】崩溃点归类分析
+================================================================================
+
+■ 类型 A —— 崩溃在 futex 自身的清理路径
+
+    el0_svc_naked
+      -> SyS_futex
+      -> do_futex
+      -> futex_lock_pi
+      -> rt_mutex_cleanup_proxy_lock
+      -> remove_waiter                 <<< 在这里 fault
+      -> rt_mutex_adjust_prio_chain
+      -> el1_da  (data abort)
+
+    含义: remove_waiter() 内部会调用 rt_mutex_adjust_prio_chain 去调整 PI 链，
+          此时读到被写坏的 waiter->lock / rb 节点，直接踩空。
+          属于「stamp 把 waiter 写坏了」的表现。
+
+■ 类型 B —— 崩溃在 sched_setattr 触发的 PI walk
+
+    el0_svc_naked
+      -> SyS_sched_setattr
+      -> __sched_setscheduler
+      -> rt_mutex_adjust_pi
+      -> rt_mutex_adjust_prio_chain
+      -> _raw_spin_trylock            <<< 在这里 fault
+      -> el1_da  (data abort)
+
+    含义: PI walk 成功进入了（说明 early-return 已被绕过，
+          waiter->prio != task->prio 这个条件成立了）。
+          随后 _raw_spin_trylock 去锁 waiter->lock 指向的地址，该地址不可访问。
+
+■ 关键判断
+
+  1) 类型 B 的出现，证明 stamp 确实落到了 waiter 结构体上，
+     PI walk 也确实被触发。也就是说「打不中」的问题已经解决。
+
+  2) 现在的问题变成：「打中了，但 lock 指针指向无效内存」。
+     这正是接下来要做的事：让 lock 指向一块真实可控的内存（如 pipe_buffer / ashmem），
+     而不是 0xdeadbeef 这类探测值。
+
+  3) 早期记忆里认为「崩溃在 sendmsg 返回路径」——从 AEE 实测栈看并不成立。
+     真实崩溃点始终在 rt_mutex 的 PI 链遍历内部。
+
+================================================================================
+【四】最新一次崩溃（03:54:06）的完整 AEE 记录
+================================================================================
+
+  崩溃点: rt_mutex_adjust_prio_chain+0x14c/0x68c
+  (该次记录尚未打包成 zip，原始文件在 /data/vendor/aee_exp/db.fatal.02.KE/)
+
+  注: .dbg 为 AEE 私有编码格式，需 mrdump_tool 解码；
+      但 ZZ_INTERNAL 已给出崩溃点，且历史 5 次的 backtrace 已完整解出，
+      足以确定崩溃调用链形态。
+
+================================================================================
+【五】原始崩溃现场（01:42:16 完整 AEE 逐行）
+================================================================================
+Exception Class: Kernel (KE)
+PC is at [<ffffff993cee5854>] _raw_spin_trylock+0x1c/0x70
+LR is at [<ffffff993bf34934>] rt_mutex_adjust_prio_chain+0x104/0x68c
+
+Current Executing Process:
+[gN, 29240][timeout, 22090][sh, 22086][binder:10707_2, 10737]
+
+Backtrace:
+[<ffffff993be8f390>] die+0x114/0x27c   
+[<ffffff993bea64c0>] __do_kernel_fault+0x12c/0x140     
+[<ffffff993bea5d10>] do_translation_fault+0x60/0x98    
+[<ffffff993be80d7c>] do_mem_abort+0x48/0xd0    
+[<ffffff993be83308>] el1_da+0x1c/0x38  
+[<ffffff993bf34930>] rt_mutex_adjust_prio_chain+0x100/0x68c    
+[<ffffff993bf3481c>] rt_mutex_adjust_pi+0x98/0xac      
+[<ffffff993bef8320>] __sched_setscheduler+0xc9c/0xe24  
+[<ffffff993bef88c8>] SyS_sched_setattr+0x3dc/0x508     
+[<ffffff993be8403c>] el0_svc_naked+0x30/0x38   
+[<fffffffffffffffb>] 0xfffffffffffffffb
+
+================================================================================
+【六】last kmsg 摘要（内核最后遗言，DigestGenerator 抓取）
+================================================================================
+Unable to handle kernel paging request at virtual address 
+
+Call trace:
+
+dump_backtrace
+
+show_stack
+
+dump_stack
+
+mrdump_common_die
+
+ipanic_die
+
+notify_die
+
+die
+
+__do_kernel_fault
+
+do_translation_fault
+
+do_mem_abort
+
+el1_da
+
+_raw_spin_trylock
+
+rt_mutex_adjust_prio_chain
+
+rt_mutex_adjust_pi
+
+__sched_setscheduler
+
+SyS_sched_setattr
+
+el0_svc_naked
+
+kpanic
+
+================================================================================
+【七】文件位置清单
+================================================================================
+
+  本报告:
+    /sdcard/GhostLock-crash-logs/GhostLock_崩溃日志整理.txt
+
+  已解出的 5 个完整崩溃包（zip，含 logcat+dmesg）:
+    /sdcard/Download/ghostlock-logs/
+      -1_ke_7982830515415353e757ee27656f7ed0...  (10-18 21:56:31)
+      -1_ke_2d494ff0ca0c4843296aff8a8c4bc1fe...  (10-18 20:47:40)
+      -1_ke_e4efb06a64d67f65e8c174eb452575db...  (10-19 00:53:51)
+      -1_ke_2f7bc346493f7540ec4d5e7c8c744165...  (10-19 01:37:54)
+      -1_ke_5d1d50fb9e141d734401c9d6443cc203...  (10-19 01:42:16)
+
+  未打包的 3 份原始 AEE 记录（含 03:54 最新一次）:
+    /sdcard/Download/ghostlock-logs/raw_01/   (02:28:35)
+    /sdcard/Download/ghostlock-logs/raw_02/   (03:54:06)  <- 最新
+    /sdcard/Download/ghostlock-logs/raw_03/   (02:21:29)
+
+  崩溃历史索引:
+    /sdcard/Download/ghostlock-logs/db_history
+
+  程序自身 checkpoint 日志:
+    /data/local/tmp/ckpt.log
+
+================================================================================
+  报告结束
+================================================================================
