@@ -1,0 +1,33 @@
+3131.123 tid=6867 BEGIN w_heap_spray
+3133.277 tid=6867 VAL   waiter_base_off = 0 (0x0)
+3133.281 tid=6867 VAL   piwalk_owner_null = 0 (0x0)
+3133.282 tid=6867 VAL   pg_lock_owner = -521059990527 (0xffffff86ae678401)
+3134.654 tid=6867 END   w_heap_spray
+3134.658 tid=6867 BEGIN w_route
+3134.660 tid=16205 BEGIN owner_lock_pi_target
+3134.660 tid=16204 BEGIN waiter_lock_pi_chain
+3134.661 tid=16206 VAL   self_prio_after_batch19 = 39 (0x27)
+3134.662 tid=16204 END   waiter_lock_pi_chain
+3134.662 tid=16205 END   owner_lock_pi_target
+3134.665 tid=16205 BEGIN owner_lock_pi_chain
+3134.666 tid=16204 VAL   prio_at_block = 20 (0x14)
+3134.667 tid=16204 BEGIN waiter_wait_requeue_pi
+3134.717 tid=6867 BEGIN main_cmp_requeue_pi
+3134.720 tid=6867 END   main_cmp_requeue_pi
+3134.721 tid=6867 VAL   cmp_ret = -1 (0xffffffffffffffff)
+3134.722 tid=6867 VAL   cmp_errno = 35 (0x23)
+3134.722 tid=6867 VAL   cmp_dangling = 1 (0x1)
+3134.723 tid=6867 VAL   pi_target = 2147499853 (0x80003f4d)
+3134.723 tid=6867 VAL   pi_chain = 2147499852 (0x80003f4c)
+3134.724 tid=6867 VAL   fire_from_main = 0 (0x0)
+3134.724 tid=6867 VAL   punch_go_before = 0 (0x0)
+3135.666 tid=16206 VAL   cons_armed = 1 (0x1)
+3135.669 tid=16206 VAL   cons_delay_usec = 50000 (0xc350)
+3135.720 tid=16206 VAL   cons_after_sleep = 1 (0x1)
+3135.721 tid=16204 VAL   d7_consumer_calls = 1 (0x1)
+3135.721 tid=16206 VAL   cons_tid_target = 16204 (0x3f4c)
+3135.721 tid=16204 VAL   d7_consumer_success = 0 (0x0)
+3135.722 tid=16206 VAL   cons_call_idx = 1 (0x1)
+3135.723 tid=16204 VAL   d7_spins = 1000000 (0xf4240)
+3135.723 tid=16206 BEGIN consumer_sched_setattr
+3135.723 tid=16204 VAL   d7_futex_ret = -1 (0xffffffffffffffff)

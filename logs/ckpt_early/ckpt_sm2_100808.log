@@ -1,0 +1,23 @@
+273.799 tid=18576 BEGIN w_heap_spray
+279.586 tid=18576 END   w_heap_spray
+279.591 tid=18576 BEGIN w_route
+279.594 tid=25701 BEGIN owner_lock_pi_target
+279.595 tid=25700 BEGIN waiter_lock_pi_chain
+279.595 tid=25701 END   owner_lock_pi_target
+279.596 tid=25700 END   waiter_lock_pi_chain
+279.598 tid=25701 BEGIN owner_lock_pi_chain
+279.599 tid=25700 BEGIN waiter_wait_requeue_pi
+279.649 tid=18576 BEGIN main_cmp_requeue_pi
+279.652 tid=18576 END   main_cmp_requeue_pi
+280.599 tid=25700 END   waiter_wait_requeue_pi
+280.604 tid=25700 VAL   sm_probe = 2 (0x2)
+280.605 tid=25700 VAL   sm_name_len = 48 (0x30)
+280.606 tid=25700 VAL   sm_fake_task = -517308251136 (0xffffff878e068400)
+280.606 tid=25700 VAL   sm_fake_lock = -517308252160 (0xffffff878e068000)
+280.607 tid=25700 VAL   sm_page_base = -517308252160 (0xffffff878e068000)
+280.608 tid=25700 VAL   sm_name_08 = -517308251136 (0xffffff878e068400)
+280.608 tid=25700 VAL   sm_name_10 = -2401053088876216593 (0xdeadbeefdeadbeef)
+280.609 tid=25700 VAL   sm_name_18 = 140 (0x8c)
+280.609 tid=25700 VAL   sm_snd_fd = 6 (0x6)
+280.610 tid=25700 VAL   sm_sndbuf_eff = 16384 (0x4000)
+280.810 tid=25702 BEGIN consumer_sched_setattr

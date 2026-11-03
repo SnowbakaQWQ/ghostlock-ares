@@ -1,0 +1,40 @@
+1110.844 tid=22180 BEGIN owner_lock_pi_target
+1110.844 tid=22181 VAL   self_prio_after_batch19 = 39 (0x27)
+1110.847 tid=22180 END   owner_lock_pi_target
+1110.844 tid=22179 BEGIN waiter_lock_pi_chain
+1110.849 tid=22179 END   waiter_lock_pi_chain
+1110.850 tid=22180 BEGIN owner_lock_pi_chain
+1110.851 tid=22179 VAL   prio_at_block = 20 (0x14)
+1110.852 tid=22179 BEGIN waiter_wait_requeue_pi
+1110.982 tid=22178 BEGIN main_cmp_requeue_pi
+1110.985 tid=22178 END   main_cmp_requeue_pi
+1110.986 tid=22178 VAL   cmp_ret = -1 (0xffffffffffffffff)
+1110.986 tid=22178 VAL   cmp_errno = 35 (0x23)
+1110.987 tid=22178 VAL   cmp_dangling = 1 (0x1)
+1110.988 tid=22178 VAL   pi_target = 2147505828 (0x800056a4)
+1110.988 tid=22178 VAL   pi_chain = 2147505827 (0x800056a3)
+1110.989 tid=22178 VAL   fire_from_main = 1 (0x1)
+1110.989 tid=22178 VAL   punch_go_before = 0 (0x0)
+1110.992 tid=22178 BEGIN main_fire_consumer
+1110.993 tid=22181 VAL   cons_armed = 1 (0x1)
+1110.994 tid=22181 VAL   cons_delay_usec = 50000 (0xc350)
+1111.045 tid=22181 VAL   cons_after_sleep = 1 (0x1)
+1111.049 tid=22178 END   main_fire_consumer
+1111.049 tid=22181 VAL   cons_tid_target = 22179 (0x56a3)
+1111.050 tid=22181 VAL   cons_call_idx = 1 (0x1)
+1111.052 tid=22181 BEGIN consumer_sched_setattr
+1111.053 tid=22181 VAL   cons_sched_ret = 0 (0x0)
+1111.054 tid=22181 VAL   cons_sched_errno = 0 (0x0)
+1111.056 tid=22181 END   consumer_sched_setattr
+1111.851 tid=22179 END   waiter_wait_requeue_pi
+1111.855 tid=22179 VAL   d8_stamp_ret = -1 (0xffffffffffffffff)
+1111.855 tid=22178 VAL   obs_wait_ms = 780 (0x30c)
+1111.855 tid=22179 VAL   d8_stamp_errno = 22 (0x16)
+1111.856 tid=22178 VAL   obs_stamp_enter = 1 (0x1)
+1111.857 tid=22179 VAL   d8_consumer_success = 1 (0x1)
+1111.857 tid=22178 VAL   obs_stamp_done = 1 (0x1)
+1111.858 tid=22178 VAL   obs_stamp_fd = 3 (0x3)
+1111.859 tid=22178 VAL   obs_stamp_ret = -1 (0xffffffffffffffff)
+1111.859 tid=22178 VAL   obs_stamp_errno = 22 (0x16)
+1111.860 tid=22178 VAL   obs_stamp_optlen = 136 (0x88)
+1111.860 tid=22178 VAL   obs_stamp_off = 112 (0x70)

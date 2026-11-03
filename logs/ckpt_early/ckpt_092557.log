@@ -1,0 +1,20 @@
+3253.099 tid=25599 BEGIN w_heap_spray
+3258.782 tid=25599 END   w_heap_spray
+3258.786 tid=25599 BEGIN w_gate_prepare
+3258.790 tid=25599 VAL   sm_gate_ready = 1 (0x1)
+3258.796 tid=25599 END   w_gate_prepare
+3258.797 tid=25599 BEGIN w_route
+3258.799 tid=341 BEGIN owner_lock_pi_target
+3258.799 tid=340 BEGIN waiter_lock_pi_chain
+3258.799 tid=341 END   owner_lock_pi_target
+3258.800 tid=340 END   waiter_lock_pi_chain
+3258.803 tid=341 BEGIN owner_lock_pi_chain
+3258.803 tid=340 BEGIN waiter_wait_requeue_pi
+3258.855 tid=25599 BEGIN main_cmp_requeue_pi
+3258.858 tid=25599 END   main_cmp_requeue_pi
+3258.859 tid=25599 VAL   cmp_requeue_ret = -1 (0xffffffffffffffff)
+3258.860 tid=25599 VAL   cmp_requeue_errno = 35 (0x23)
+3258.864 tid=25599 BEGIN main_wait_punch
+3259.955 tid=354 BEGIN consumer_sched_setattr
+3259.956 tid=25599 VAL   main_punch_calls = 1 (0x1)
+3259.965 tid=25599 END   main_wait_punch

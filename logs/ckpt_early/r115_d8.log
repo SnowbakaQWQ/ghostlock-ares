@@ -1,0 +1,37 @@
+1037.041 tid=20155 BEGIN d8_heap_spray
+1039.249 tid=20155 VAL   waiter_base_off = 32 (0x20)
+1039.252 tid=20155 VAL   piwalk_owner_null = 0 (0x0)
+1039.252 tid=20155 VAL   pg_lock_owner = -537272843263 (0xffffff82e80b0401)
+1040.419 tid=20155 END   d8_heap_spray
+1040.425 tid=27284 BEGIN owner_lock_pi_target
+1040.425 tid=27283 BEGIN waiter_lock_pi_chain
+1040.426 tid=27284 END   owner_lock_pi_target
+1040.426 tid=27285 VAL   self_prio_after_batch19 = 39 (0x27)
+1040.426 tid=27283 END   waiter_lock_pi_chain
+1040.429 tid=27284 BEGIN owner_lock_pi_chain
+1040.429 tid=27283 VAL   prio_at_block = 20 (0x14)
+1040.430 tid=27283 BEGIN waiter_wait_requeue_pi
+1040.561 tid=20155 BEGIN main_cmp_requeue_pi
+1040.564 tid=20155 END   main_cmp_requeue_pi
+1040.565 tid=20155 VAL   cmp_ret = -1 (0xffffffffffffffff)
+1040.566 tid=20155 VAL   cmp_errno = 35 (0x23)
+1040.567 tid=20155 VAL   cmp_dangling = 1 (0x1)
+1040.568 tid=20155 VAL   pi_target = 2147510932 (0x80006a94)
+1040.568 tid=20155 VAL   pi_chain = 2147510931 (0x80006a93)
+1040.569 tid=20155 VAL   fire_from_main = 0 (0x0)
+1040.569 tid=20155 VAL   punch_go_before = 0 (0x0)
+1041.429 tid=27283 END   waiter_wait_requeue_pi
+1041.432 tid=27285 VAL   cons_armed = 1 (0x1)
+1041.433 tid=27285 VAL   cons_delay_usec = 50000 (0xc350)
+1041.436 tid=20155 VAL   obs_wait_ms = 840 (0x348)
+1041.436 tid=20155 VAL   obs_stamp_enter = 1 (0x1)
+1041.437 tid=20155 VAL   obs_stamp_done = 1 (0x1)
+1041.438 tid=20155 VAL   obs_stamp_fd = 4 (0x4)
+1041.438 tid=20155 VAL   obs_stamp_ret = -1 (0xffffffffffffffff)
+1041.438 tid=20155 VAL   obs_stamp_errno = 22 (0x16)
+1041.439 tid=20155 VAL   obs_stamp_optlen = 264 (0x108)
+1041.439 tid=20155 VAL   obs_stamp_off = 112 (0x70)
+1041.483 tid=27285 VAL   cons_after_sleep = 1 (0x1)
+1041.486 tid=27285 VAL   cons_tid_target = 27283 (0x6a93)
+1041.487 tid=27285 VAL   cons_call_idx = 1 (0x1)
+1041.487 tid=27285 BEGIN consumer_sched_setattr

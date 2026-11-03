@@ -1,0 +1,24 @@
+290.703 tid=15394 BEGIN owner_lock_pi_target
+290.703 tid=15393 BEGIN waiter_lock_pi_chain
+290.703 tid=15395 VAL   self_prio_after_batch19 = 39 (0x27)
+290.703 tid=15394 END   owner_lock_pi_target
+290.704 tid=15393 END   waiter_lock_pi_chain
+290.706 tid=15394 BEGIN owner_lock_pi_chain
+290.708 tid=15393 VAL   prio_at_block = 20 (0x14)
+290.708 tid=15393 BEGIN waiter_wait_requeue_pi
+290.839 tid=15391 BEGIN main_cmp_requeue_pi
+290.842 tid=15391 END   main_cmp_requeue_pi
+290.843 tid=15391 VAL   cmp_ret = -1 (0xffffffffffffffff)
+290.843 tid=15391 VAL   cmp_errno = 35 (0x23)
+290.844 tid=15391 VAL   cmp_dangling = 1 (0x1)
+290.844 tid=15391 VAL   pi_target = 2147499042 (0x80003c22)
+290.844 tid=15391 VAL   pi_chain = 2147499041 (0x80003c21)
+290.844 tid=15391 VAL   fire_from_main = 0 (0x0)
+290.845 tid=15391 VAL   punch_go_before = 0 (0x0)
+291.708 tid=15393 END   waiter_wait_requeue_pi
+291.711 tid=15395 VAL   cons_armed = 1 (0x1)
+291.712 tid=15395 VAL   cons_delay_usec = 50000 (0xc350)
+291.763 tid=15395 VAL   cons_after_sleep = 1 (0x1)
+291.767 tid=15395 VAL   cons_tid_target = 15393 (0x3c21)
+291.768 tid=15395 VAL   cons_call_idx = 1 (0x1)
+291.769 tid=15395 BEGIN consumer_sched_setattr

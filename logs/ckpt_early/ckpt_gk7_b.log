@@ -1,0 +1,42 @@
+6640.014 tid=6122 BEGIN w_heap_spray
+6642.498 tid=6122 VAL   waiter_base_off = 32 (0x20)
+6642.501 tid=6122 VAL   piwalk_owner_null = 1 (0x1)
+6642.502 tid=6122 VAL   pg_lock_owner = 1 (0x1)
+6644.115 tid=6122 END   w_heap_spray
+6644.118 tid=6122 BEGIN w_route
+6644.119 tid=15562 BEGIN waiter_lock_pi_chain
+6644.119 tid=15563 BEGIN owner_lock_pi_target
+6644.120 tid=15562 END   waiter_lock_pi_chain
+6644.121 tid=15563 END   owner_lock_pi_target
+6644.123 tid=15563 BEGIN owner_lock_pi_chain
+6644.123 tid=15562 BEGIN waiter_wait_requeue_pi
+6644.174 tid=6122 BEGIN main_cmp_requeue_pi
+6644.178 tid=6122 END   main_cmp_requeue_pi
+6644.178 tid=6122 VAL   cmp_ret = -1 (0xffffffffffffffff)
+6644.179 tid=6122 VAL   cmp_errno = 35 (0x23)
+6644.180 tid=6122 VAL   cmp_dangling = 1 (0x1)
+6644.181 tid=6122 VAL   pi_target = 2147499211 (0x80003ccb)
+6644.182 tid=6122 VAL   pi_chain = 2147499210 (0x80003cca)
+6644.182 tid=6122 VAL   fire_from_main = 0 (0x0)
+6644.183 tid=6122 VAL   punch_go_before = 0 (0x0)
+6645.123 tid=15562 END   waiter_wait_requeue_pi
+6645.131 tid=15562 VAL   sm_probe = 0 (0x0)
+6645.132 tid=15562 VAL   sm_name_len = 48 (0x30)
+6645.133 tid=15562 VAL   sm_fake_task = -546449783808 (0xffffff80c50e0400)
+6645.134 tid=15562 VAL   sm_fake_lock = -546449784832 (0xffffff80c50e0000)
+6645.135 tid=15562 VAL   sm_page_base = -546449784832 (0xffffff80c50e0000)
+6645.136 tid=15562 VAL   sm_name_08 = -546449783808 (0xffffff80c50e0400)
+6645.136 tid=15562 VAL   sm_name_10 = -546449784832 (0xffffff80c50e0000)
+6645.137 tid=15562 VAL   sm_name_18 = 140 (0x8c)
+6645.138 tid=15562 VAL   sm_snd_fd = 6 (0x6)
+6645.138 tid=15562 VAL   sm_sndbuf_eff = 16384 (0x4000)
+6645.139 tid=15562 VAL   sm_go_fired = 1 (0x1)
+6645.139 tid=15564 VAL   cons_armed = 1 (0x1)
+6645.140 tid=15562 VAL   sm_delay_usec = 200000 (0x30d40)
+6645.141 tid=15564 VAL   cons_delay_usec = 200000 (0x30d40)
+6645.141 tid=15562 VAL   sm_maxseg = 536 (0x218)
+6645.142 tid=15562 VAL   sm_enter = 1 (0x1)
+6645.341 tid=15564 VAL   cons_after_sleep = 1 (0x1)
+6645.345 tid=15564 VAL   cons_tid_target = 15562 (0x3cca)
+6645.346 tid=15564 VAL   cons_call_idx = 1 (0x1)
+6645.346 tid=15564 BEGIN consumer_sched_setattr

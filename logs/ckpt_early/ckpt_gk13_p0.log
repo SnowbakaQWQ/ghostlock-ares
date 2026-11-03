@@ -1,0 +1,62 @@
+10379.608 tid=24133 BEGIN w_heap_spray
+10382.445 tid=24133 VAL   waiter_base_off = 0 (0x0)
+10382.447 tid=24133 VAL   piwalk_owner_null = 0 (0x0)
+10382.447 tid=24133 VAL   pg_lock_owner = -485084265471 (0xffffff8f0eb98401)
+10383.417 tid=24133 END   w_heap_spray
+10383.421 tid=24133 BEGIN w_route
+10383.422 tid=31294 BEGIN owner_lock_pi_target
+10383.422 tid=31293 BEGIN waiter_lock_pi_chain
+10383.422 tid=31295 VAL   self_prio_after_batch19 = 39 (0x27)
+10383.423 tid=31293 END   waiter_lock_pi_chain
+10383.423 tid=31294 END   owner_lock_pi_target
+10383.424 tid=31294 BEGIN owner_lock_pi_chain
+10383.425 tid=31293 VAL   prio_at_block = 20 (0x14)
+10383.426 tid=31293 BEGIN waiter_wait_requeue_pi
+10383.475 tid=24133 BEGIN main_cmp_requeue_pi
+10383.478 tid=24133 END   main_cmp_requeue_pi
+10383.479 tid=24133 VAL   cmp_ret = -1 (0xffffffffffffffff)
+10383.479 tid=24133 VAL   cmp_errno = 35 (0x23)
+10383.480 tid=24133 VAL   cmp_dangling = 1 (0x1)
+10383.480 tid=24133 VAL   pi_target = 2147514942 (0x80007a3e)
+10383.480 tid=24133 VAL   pi_chain = 2147514941 (0x80007a3d)
+10383.481 tid=24133 VAL   fire_from_main = 0 (0x0)
+10383.481 tid=24133 VAL   punch_go_before = 0 (0x0)
+10384.425 tid=31293 END   waiter_wait_requeue_pi
+10384.428 tid=31293 VAL   mc_enter = 1 (0x1)
+10384.429 tid=31293 VAL   mc_off = 112 (0x70)
+10384.429 tid=31293 VAL   mc_probe = 0 (0x0)
+10384.429 tid=31293 VAL   mc_buf_len = 264 (0x108)
+10384.430 tid=31293 VAL   mc_off_lock = 168 (0xa8)
+10384.430 tid=31293 VAL   mc_off_prio = 176 (0xb0)
+10384.431 tid=31293 VAL   mc_clean_fire = 1 (0x1)
+10384.433 tid=31293 VAL   mc_fire_at = 4 (0x4)
+10384.433 tid=31293 VAL   mc_buf_task = -485084265472 (0xffffff8f0eb98400)
+10384.434 tid=31293 VAL   mc_buf_lock = -485084266496 (0xffffff8f0eb98000)
+10384.434 tid=31293 VAL   mc_buf_prio = 140 (0x8c)
+10384.435 tid=31293 VAL   mc_iter = 1 (0x1)
+10384.435 tid=31293 BEGIN mc_setsockopt
+10384.435 tid=31293 END   mc_setsockopt
+10384.436 tid=31293 VAL   mc_ret = -1 (0xffffffffffffffff)
+10384.436 tid=31293 VAL   mc_errno = 99 (0x63)
+10384.436 tid=31293 VAL   mc_iter = 2 (0x2)
+10384.437 tid=31293 BEGIN mc_setsockopt
+10384.437 tid=31293 END   mc_setsockopt
+10384.437 tid=31293 VAL   mc_ret = -1 (0xffffffffffffffff)
+10384.438 tid=31293 VAL   mc_errno = 99 (0x63)
+10384.438 tid=31293 VAL   mc_iter = 3 (0x3)
+10384.438 tid=31293 BEGIN mc_setsockopt
+10384.438 tid=31293 END   mc_setsockopt
+10384.439 tid=31293 VAL   mc_ret = -1 (0xffffffffffffffff)
+10384.439 tid=31293 VAL   mc_errno = 99 (0x63)
+10384.439 tid=31293 VAL   mc_iter = 4 (0x4)
+10384.439 tid=31293 VAL   mc_pre_off_lock = 168 (0xa8)
+10384.440 tid=31293 VAL   mc_pre_buf_lock = -485084266496 (0xffffff8f0eb98000)
+10384.440 tid=31293 VAL   mc_pre_buf_task = -485084265472 (0xffffff8f0eb98400)
+10384.440 tid=31293 VAL   mc_pre_buf_prio = 140 (0x8c)
+10384.440 tid=31293 VAL   mc_about_to_stamp = 4 (0x4)
+10384.441 tid=31295 VAL   cons_armed = 4 (0x4)
+10384.441 tid=31295 VAL   cons_delay_usec = 0 (0x0)
+10384.444 tid=31295 VAL   cons_after_sleep = 4 (0x4)
+10384.444 tid=31295 VAL   cons_tid_target = 31293 (0x7a3d)
+10384.445 tid=31295 VAL   cons_call_idx = 1 (0x1)
+10384.448 tid=31295 BEGIN consumer_sched_setattr

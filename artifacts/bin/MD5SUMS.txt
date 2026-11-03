@@ -1,4 +1,9 @@
 1f52c2da6fd5c9523aa3699942dabefc  gK108
 40bb48ded4b88a71f396207f373db5a9  gK109
-gK108 = 1f52c2da 基线（0x02080B28 旧写目标）
-gK109 = 40bb48de P3 修正（0x02080B08 = &selinux_state）
+634a144f4b58b814b0dfa98345db362d  gK92
+ed88df2da9221645abc3fa521b845fef  build.sh
+
+--- 附注 ---
+gK108 = 1f52c2da  基线（0x02080B28 旧写目标）
+gK109 = 40bb48de  P3 修正（0x02080B08 = &selinux_state）
+gK92  = 634a144f  rb_erase_cached+0x30 里程碑（stamp 三字段全生效的基准参数组）

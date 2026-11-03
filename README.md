@@ -68,15 +68,26 @@ src/                  适配后的 exploit 源码（含多机型 offset 表）
     target.h          ★ 目标地址常量
     <其他机型>/        ace6t / op15 / opd2502 / rmx5070 / findx8
 artifacts/
-  bin/                gK108（基线）、gK109（P3 修正）+ MD5SUMS.txt + build.sh
+  bin/                gK108（基线）、gK109（P3 修正）、gK92（rb_erase 里程碑）
+                      + MD5SUMS.txt + build.sh
   profile/            GhostLock App 的 profile（assets_ares.conf / profile_ares.bin）
+tools/
+  runners/            ★ 上机脚本（含完整环境变量 export + dryrun 闸门 + 事后断言）
+                      run_gk110/111/112.sh 含 assert_eq 校验，是"单变量"规矩的模板
+  probes/             p0probe.c / p0probe2.c（P0 MemFree 区分实验）
+                      fix_errno.py / fix_rb*.py / patch.py / parse_ioctl.py
+  rebuild74.py        幂等 patch 脚本（崩溃后回滚重建源码树用）
 logs/
-  ckpt/               60+ 次实跑的 ckpt 打点日志
+  ckpt/               60+ 次实跑的 ckpt 打点日志（gK41 ~ gK116）
+  ckpt_early/         早期（gK3~gK16）ckpt 日志，44 份
   aee/                AEE 取证明文（db_history CSV + ZZ_INTERNAL）
+  evidence/           hwt_1056_raw.log.gz（126306 行 HWT 现场日志）
+                      gk_stage_snapshots.tar.gz（各阶段源码快照）
   ghostlock-SUCCESS-run1.log
 reference/
   syms/               syms7.txt（⚠ 见下文"符号表不可靠"）、all_syms.txt
-  notes/              机型笔记、PROFILE_SCHEMA_ZH.md
+  notes/              机型笔记、PROFILE_SCHEMA_ZH.md、上游各移植版 README
+                      （aresin_OFFSETS/PROGRESS、k40、k419、pckm00、ccp_*）
   upstream/           上游 PoC 资料（NebuSec/CyberMeowfia、IonStack 等）
 docs/
   FINDINGS.zh.md      ★ 全部结论 + 证据等级 + 已证伪路线

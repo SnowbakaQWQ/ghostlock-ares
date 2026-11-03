@@ -1,0 +1,33 @@
+1070.793 tid=18039 BEGIN w_heap_spray
+1075.199 tid=18039 END   w_heap_spray
+1075.203 tid=18039 BEGIN w_route
+1075.207 tid=25149 BEGIN owner_lock_pi_target
+1075.207 tid=25148 BEGIN waiter_lock_pi_chain
+1075.208 tid=25149 END   owner_lock_pi_target
+1075.209 tid=25148 END   waiter_lock_pi_chain
+1075.211 tid=25149 BEGIN owner_lock_pi_chain
+1075.212 tid=25148 BEGIN waiter_wait_requeue_pi
+1075.262 tid=18039 BEGIN main_cmp_requeue_pi
+1075.266 tid=18039 END   main_cmp_requeue_pi
+1075.266 tid=18039 VAL   cmp_ret = -1 (0xffffffffffffffff)
+1075.267 tid=18039 VAL   cmp_errno = 35 (0x23)
+1075.268 tid=18039 VAL   cmp_dangling = 1 (0x1)
+1075.269 tid=18039 VAL   pi_target = 2147508797 (0x8000623d)
+1075.269 tid=18039 VAL   pi_chain = 2147508796 (0x8000623c)
+1075.270 tid=18039 VAL   fire_from_main = 0 (0x0)
+1075.270 tid=18039 VAL   punch_go_before = 0 (0x0)
+1076.212 tid=25148 END   waiter_wait_requeue_pi
+1076.215 tid=25148 VAL   sm_probe = 0 (0x0)
+1076.216 tid=25148 VAL   sm_name_len = 48 (0x30)
+1076.217 tid=25148 VAL   sm_fake_task = -498065767424 (0xffffff8c08f78400)
+1076.218 tid=25148 VAL   sm_fake_lock = -498065768448 (0xffffff8c08f78000)
+1076.218 tid=25148 VAL   sm_page_base = -498065768448 (0xffffff8c08f78000)
+1076.219 tid=25148 VAL   sm_name_08 = -498065767424 (0xffffff8c08f78400)
+1076.220 tid=25148 VAL   sm_name_10 = -498065768448 (0xffffff8c08f78000)
+1076.220 tid=25148 VAL   sm_name_18 = 140 (0x8c)
+1076.221 tid=25148 VAL   sm_snd_fd = 6 (0x6)
+1076.221 tid=25148 VAL   sm_sndbuf_eff = 16384 (0x4000)
+1076.222 tid=25148 VAL   sm_go_fired = 1 (0x1)
+1076.222 tid=25148 VAL   sm_delay_usec = 200000 (0x30d40)
+1076.223 tid=25148 VAL   sm_maxseg = 536 (0x218)
+1076.223 tid=25148 VAL   sm_enter = 1 (0x1)
